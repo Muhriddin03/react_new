@@ -19,8 +19,8 @@
     --color-light: rgba(255, 255, 255, 0.6);
     --trasition: all 400ms ease;
     --contaier-widht-lg: 75%;
-    --contaier-widht-lg: 86%;
-    --contaier-widht-ms: 90%;
+    --contaier-widht-md: 86%;
+    --contaier-widht-sm: 90%;
 }
 
 html {
@@ -82,4 +82,54 @@ a {
 
 a:hover {
     color: var(--color-white);
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-primary);
+    transition: var(--trasition);
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+// media start ============================== 
+
+@media screen and(max-width:1024px) {
+    .container {
+        width: var(--contaier-widht-md);
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+@media screen and(max-width:600px) {
+    .container {
+        width: var(--contaier-widht-sm);
+    }
+
+    section>h2 {
+        margin-top: 2rem;
+    }
 }
